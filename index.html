@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Day/Night Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Skip link for keyboard and screen reader users to jump directly to main content -->
+  <a href="#maincontent" class="skip-link">Skip to main content</a>
+
+  <!-- Main info section with heading and instructions -->
+  <main class="info" id="maincontent">
+    <h1>Day & Night Garden</h1>
+    <p>Click the <strong>door</strong> to switch between day and night.</p>
+    <p>Hover over the <strong>chimney</strong> to see smoke rise.</p>
+    <p>Click on the <strong>windows</strong> to toggle the lights on and off.</p>
+  </main>
+
+  <!-- Sky container holding all animated elements -->
+  <div class="sky" id="sky">
+    <!-- Day animal -->
+    <img src="images/rooster.png" alt="Rooster" class="animal rooster" id="rooster">
+    <!-- Night animal -->
+    <img src="images/fox.png" alt="Fox" class="animal fox" id="fox">
+
+    <!-- Sun and moon elements -->
+    <div class="sun" id="sun"></div>
+    <div class="moon" id="moon"></div>
+
+    <!-- Grass at bottom -->
+    <div class="grass"></div>
+
+    <!-- Clouds -->
+    <img src="images/cloud.png" alt="Cloud" class="cloud-image cloud1">
+    <img src="images/cloud.png" alt="Cloud" class="cloud-image cloud2">
+
+    <!-- Stars visible only at night -->
+    <div class="stars" id="stars"></div>
+
+    <!-- House structure -->
+    <div class="home" id="home">
+      <div class="roof">
+        <div class="chimney"></div>
+        <div class="puff1 smoke"></div>
+        <div class="puff2 smoke"></div>
+        <div class="puff3 smoke"></div>
+      </div>
+
+      <div class="house-body">
+        <!-- Windows act as buttons with accessibility roles and keyboard focus -->
+        <div class="window window1" role="button" tabindex="0" aria-pressed="false"></div>
+        <div class="window window2" role="button" tabindex="0" aria-pressed="false"></div>
+
+        <!-- Door acts as button to toggle day/night, accessible via keyboard -->
+        <div class="door" id="door" role="button" tabindex="0" aria-pressed="false"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

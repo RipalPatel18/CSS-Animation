@@ -1,6 +1,6 @@
 # 🌞 HTTP5121 Animation Project (CHECKPOINT)
 
-## 🧠 Project Idea
+## Project Idea
 
 This project demonstrates a **day and night transition** animation.  
 When the **door on the house** is clicked, the scene switches between **daytime** and **nighttime**.  
@@ -9,7 +9,7 @@ To make the animation more realistic, a **rooster** shows up in the morning and 
 
 ---
 
-## 🧰 What I Used
+## What I Used
 
 - **HTML** → Page structure  
 - **CSS** → Styling and animations  
@@ -18,7 +18,7 @@ To make the animation more realistic, a **rooster** shows up in the morning and 
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. Clicking the **door** triggers a JavaScript function.  
 2. If it's **day**:  
@@ -37,12 +37,9 @@ To make the animation more realistic, a **rooster** shows up in the morning and 
 
 ---
 
-## 🎞️ Animations
+## Animations
 
 - 🌞 **Sun & Moon:** Move up and down using CSS `@keyframes`  
 - ☁️ **Clouds:** Float smoothly across the sky  
 - 🐓 **Rooster:** Bounces to simulate crowing in the morning  
 - 🦊 **Fox:** Walks from one side of the screen to the other at night  
-
-
-

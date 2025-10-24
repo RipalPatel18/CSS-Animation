@@ -43,3 +43,9 @@ To make the animation more realistic, a **rooster** shows up in the morning and 
 - ☁️ **Clouds:** Float smoothly across the sky  
 - 🐓 **Rooster:** Bounces to simulate crowing in the morning  
 - 🦊 **Fox:** Walks from one side of the screen to the other at night  
+
+---
+
+##Screenshot
+
+![Screenshot 2025-10-24 143823](https://github.com/user-attachments/assets/afbab912-46a7-4144-b2b4-05ebfd412089)

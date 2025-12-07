@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Report on Usability</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px;
+            color: #2d2d2d;
+            background: #fafafa;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #1e1e1e;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 24px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 35px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 25px;
+        }
+
+        /*  Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .project-name {
+            font-size: 30px;
+            font-weight: 700;
+            color: #0d6efd;
+        }
+
+        .document-title {
+            font-size: 22px;
+            color: #444;
+            margin-top: 8px;
+        }
+
+        .creator-info {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /*  Table of Contents  */
+        .toc {
+            margin: 30px 0;
+        }
+
+        .toc-item {
+            display: flex;
+            padding: 6px 0;
+        }
+
+        .toc-number {
+            width: 35px;
+            font-weight: 600;
+        }
+
+        /*  Content Areas  */
+        p {
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+
+        ul,
+        ol {
+            padding-left: 35px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /*  Page Breaks for PDF  */
+        .page-break {
+            page-break-before: always;
+            margin-top: 50px;
+        }
+
+        /*  Data Tables  */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        table th {
+            background: #0d6efd;
+            color: white;
+            font-weight: 600;
+            padding: 12px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        table td {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 12px;
+            font-size: 15px;
+        }
+
+        table tr:nth-child(even) td {
+            background: #f9f9f9;
+        }
+
+        /*  Sections  */
+        section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+        }
+
+        /*  Lists within sections  */
+        .bullet-list {
+            list-style-type: square;
+        }
+
+        /* Highlighted Text  */
+        strong {
+            color: #0d6efd;
+        }
+
+        /*  Indentation  */
+        .indent {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="project-name fill-in" id="name">Day & Night Garden — CSS Animation</div>
+        <h1 class="document-title">Usability Final Report</h1>
+        <div class="creator-info">
+            <div class="fill-in" id="creator">Ripal Patel</div>
+            <div class="fill-in" id="date">06 December 2025</div>
+        </div>
+    </div>
+
+    <div class="page-break">
+        <h2>Table of Contents</h2>
+        <div class="toc">
+            <div class="toc-item">
+                <div class="toc-number">1</div>
+                <div>Document Overview</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">2</div>
+                <div>Executive Summary</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">3</div>
+                <div>Methodology</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">4</div>
+                <div>Participants</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">5</div>
+                <div>Training</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">6</div>
+                <div>Procedure</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">7</div>
+                <div>Roles</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Trainer</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Facilitator</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Data Logger</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Test Observers</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">8</div>
+                <div>Ethics</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">9</div>
+                <div>Usability Tasks</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">10</div>
+                <div>Usability Metrics</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Scenario Completion</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Critical Errors</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Non-critical Errors</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Subjective Evaluations</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Scenario Completion Time (time on task)</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">11</div>
+                <div>Usability Goals</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Completion Rate</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Error-free rate</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Time on Task (TOT)</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Subjective Measures</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">12</div>
+                <div>Problem Severity</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Impact</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Frequency</div>
+            </div>
+            <div class="toc-item indent">
+                <div class="toc-number"></div>
+                <div>Problem Severity Classification</div>
+            </div>
+            <div class="toc-item">
+                <div class="toc-number">13</div>
+                <div>Reporting Results</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break">
+        <h2>Document Overview</h2>
+        <p>This document describes a test plan for conducting a usability test during the development of <span
+                class="fill-in" id="website">Day & Night Garden — CSS Animation</span> and report of the results.
+            The goals of usability testing include establishing a baseline of user performance, establishing and
+            validating user performance measures, and identifying potential design concerns to be addressed in order to
+            improve the efficiency, productivity, and end-user satisfaction.</p>
+        <p class="fill-in" id="goals">The main goals are to understand how easily users discover interactive elements,
+            identify confusion points, and measure how intuitive the animations feel for first-time users.
+        </p>
+
+        <p>The usability test objectives are:</p>
+        <ul class="bullet-list">
+            <li>To determine design inconsistencies and usability problem areas within the user interface and content
+                areas. Potential sources of error may include:
+                <ul class="bullet-list">
+                    <li>Navigation errors – failure to locate functions, excessive keystrokes to complete a function,
+                        failure to follow recommended screen flow.</li>
+                    <li>Presentation errors – failure to locate and properly act upon desired information in screens,
+                        selection errors due to labeling ambiguities.</li>
+                    <li>Control usage problems – improper toolbar or entry field usage.</li>
+                </ul>
+            </li>
+            <li>Exercise the application or web site under controlled test conditions with representative users. Data
+                will be used to access whether usability goals regarding an effective, efficient, and well-received user
+                interface have been achieved.</li>
+            <li>Establish baseline user performance and user-satisfaction levels of the user interface for future
+                usability evaluations.</li>
+        </ul>
+
+        <p class="fill-in" id="user-group">The project is intended for general web users. Four Humber College students
+            participated in testing. All sessions were done in person using a laptop between Nov 25–26, 2025.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Executive Summary</h2>
+        <p class="fill-in" id="details">This usability test evaluated the Day & Night Garden project focusing on
+            day/night transition, sun/moon interactions, animated elements, and window lights. Overall, users enjoyed
+            the animation but had trouble discovering interactive elements. Recommendations include improving
+            discoverability, feedback, and light guidance.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Methodology</h2>
+        <p class="fill-in" id="methodology">Four participants completed 10–15 minute sessions on a laptop. A prepared
+            script was used. Data collected included task success, time on task, errors, confusion points, and user
+            comments.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Participants</h2>
+        <p class="fill-in" id="number-participants">Four participants were Tested. All were regular web users with basic
+            computer skills. No prior animation experience required.
+        </p>
+        <p class="fill-in" id="selection">Participants were selected informally from classmates/ Friends who were
+            comfortable using websites but had not seen the project before.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Training</h2>
+        <p class="fill-in" id="training">No training was provided. Participants only received a general explanation of
+            the purpose of the usability test to accurately measure natural first-time interactions.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Procedure</h2>
+        <p class="fill-in" id="procedure">Each participant used a laptop in person. The facilitator followed the script:
+            intro - background questions - homepage tour - tasks - wrap-up. While Testing I used notes to write down
+            experience.
+        </p>
+
+    </div>
+
+    <div class="page-break">
+        <h2>Usability Tasks</h2>
+        <p class="fill-in" id="task-1">Tasks were derived from core interactions: triggering day/night transition,
+            interacting with sun/moon, observing ambient elements, and toggling window lights.
+        </p>
+        <p class="fill-in" id="task-2">Participants were asked to explore the scene, find how to change time of day,
+            interact with the sky/sun/moon, and toggle house windows. Tasks represent typical user behavior.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Usability Metrics</h2>
+        <p>Usability metrics refers to user performance measured against specific performance goals necessary to satisfy
+            usability requirements. Scenario completion success rates, adherence to dialog scripts, error rates, and
+            subjective evaluations will be used. Time-to-completion of scenarios will also be collected.</p>
+
+        <h2>Scenario Completion</h2>
+        <p>Each scenario will require, or request, that the participant obtains or inputs specific data that would be
+            used in course of a typical task. The scenario is completed when the participant indicates the scenario's
+            goal has been obtained (whether successfully or unsuccessfully) or the participant requests and receives
+            sufficient guidance as to warrant scoring the scenario as a critical error.</p>
+
+        <p class="fill-in">The main metrics used were: scenario completion, error type, time on task, and user comments.
+        </p>
+        <h2>Critical Errors</h2>
+        <p>Critical errors are deviations at completion from the targets of the scenario. Obtaining or otherwise
+            reporting of the wrong data value due to participant workflow is a critical error. Participants may or may
+            not be aware that the task goal is incorrect or incomplete.</p>
+
+        <p>Independent completion of the scenario is a universal goal; help obtained from the other usability test roles
+            is cause to score the scenario a critical error. Critical errors can also be assigned when the participant
+            initiates (or attempts to initiate) and action that will result in the goal state becoming unobtainable. In
+            general, critical errors are unresolved errors during the process of completing the task or errors that
+            produce an incorrect outcome.</p>
+
+        <h2>Non-critical Errors</h2>
+        <p>Non-critical errors are errors that are recovered from by the participant or, if not detected, do not result
+            in processing problems or unexpected results. Although non-critical errors can be undetected by the
+            participant, when they are detected they are generally frustrating to the participant.</p>
+
+        <p>These errors may be procedural, in which the participant does not complete a scenario in the most optimal
+            means (e.g., excessive steps and keystrokes). These errors may also be errors of confusion (ex., initially
+            selecting the wrong function, using a user-interface control incorrectly such as attempting to edit an
+            un-editable field).</p>
+
+        <p>Noncritical errors can always be recovered from during the process of completing the scenario. Exploratory
+            behavior, such as opening the wrong menu while searching for a function, will be coded as a non-critical
+            error.</p>
+
+        <h2>Subjective Evaluations</h2>
+        <p>Subjective evaluations regarding ease of use and satisfaction will be collected via questionnaires, and
+            during debriefing at the conclusion of the session. The questionnaires will utilize free-form responses and
+            rating scales.</p>
+
+        <h2>Scenario Completion Time (time on task)</h2>
+        <p>The time to complete each scenario, not including subjective evaluation durations, will be recorded.</p>
+    </div>
+
+    <div class="page-break">
+        <h2>Usability Goals</h2>
+        <p>The next section describes the usability goals.</p>
+
+        <h2>Completion Rate</h2>
+        <p>Completion rate is the percentage of test participants who successfully complete the task without critical
+            errors. A critical error is defined as an error that results in an incorrect or incomplete outcome. In other
+            words, the completion rate represents the percentage of participants who, when they are finished with the
+            specified task, have an "output" that is correct. Note: If a participant requires assistance in order to
+            achieve a correct output then the task will be scored as a critical error and the overall completion rate
+            for the task will be affected.</p>
+
+        <p>A completion rate of <span class="fill-in" id="completion-rate">98%</span> is the
+            goal for each task in this usability test.</p>
+
+        <h2>Error-free rate</h2>
+        <p>Error-free rate is the percentage of test participants who complete the task without any errors (critical or
+            non-critical errors). A non-critical error is an error that would not have an impact on the final output of
+            the task but would result in the task being completed less efficiently.</p>
+
+        <p>An error-free rate of <span class="fill-in" id="error-rate">80%</span> is the goal
+            for each task in this usability test.</p>
+
+        <h2>Time on Task (TOT)</h2>
+        <p>The time to complete a scenario is referred to as "time on task". It is measured from the time the person
+            begins the scenario to the time he/she signals completion.</p>
+
+        <h2>Subjective Measures</h2>
+        <p>Subjective opinions about specific tasks, time to perform each task, features, and functionality will be
+            surveyed. At the end of the test, participants will rate their satisfaction with the overall system.
+            Combined with the interview/debriefing session, these data are used to assess attitudes of the participants.
+        </p>
+    </div>
+
+    <div class="page-break">
+        <h2>Problem Severity</h2>
+        <p>To prioritize recommendations, a method of problem severity classification will be used in the analysis of
+            the data collected during evaluation activities. The approach treats problem severity as a combination of
+            two factors - the impact of the problem and the frequency of users experiencing the problem during the
+            evaluation.</p>
+
+        <h2>Impact</h2>
+        <p>Impact is the ranking of the consequences of the problem by defining the level of impact that the problem has
+            on successful task completion. There are three levels of impact:</p>
+        <ul class="bullet-list">
+            <li>High - prevents the user from completing the task (critical error)</li>
+            <li>Moderate - causes user difficulty but the task can be completed (non-critical error)</li>
+            <li>Low - minor problems that do not significantly affect the task completion (non-critical error)</li>
+        </ul>
+
+        <h2>Frequency</h2>
+        <p>Frequency is the percentage of participants who experience the problem when working on a task.</p>
+        <ul class="bullet-list">
+            <li>High: 30% or more of the participants experience the problem</li>
+            <li>Moderate: 11% - 29% of participants experience the problem</li>
+            <li>Low: 10% or fewer of the participants experience the problem</li>
+        </ul>
+
+        <h2>Problem Severity Classification</h2>
+        <p>The identified severity for each problem implies a general reward for resolving it, and a general risk for
+            not addressing it, in the current release.</p>
+
+        <p><strong>Severity 1</strong> - High impact problems that often prevent a user from correctly completing a
+            task. They occur in varying frequency and are characteristic of calls to the Help Desk. Reward for
+            resolution is typically exhibited in fewer Help Desk calls and reduced redevelopment costs.</p>
+
+        <p><strong>Severity 2</strong> - Moderate to high frequency problems with moderate to low impact are typical of
+            erroneous actions that the participant recognizes needs to be undone. Reward for resolution is typically
+            exhibited in reduced time on task and decreased training costs.</p>
+
+        <p><strong>Severity 3</strong> - Either moderate problems with low frequency or low problems with moderate
+            frequency; these are minor annoyance problems faced by a number of participants. Reward for resolution is
+            typically exhibited in reduced time on task and increased data integrity.</p>
+
+        <p><strong>Severity 4</strong> - Low impact problems faced by few participants; there is low risk to not
+            resolving these problems. Reward for resolution is typically exhibited in increased user satisfaction.</p>
+    </div>
+
+    <div class="page-break">
+        <h2>Data Collected</h2>
+        <section id="data-collected">
+
+            <p>
+                The table below summarizes the data collected during the usability testing sessions for the
+                Day &amp; Night Garden project. All participants attempted the same set of tasks.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Participant</th>
+                        <th>Background</th>
+                        <th>Task Success</th>
+                        <th>Approx. Time on Tasks</th>
+                        <th>Errors / Confusion</th>
+                        <th>Comments &amp; Observations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Participant 1 – Navaneeth</td>
+                        <td>Regular web user, some experience with interactive sites.</td>
+                        <td>Completed all tasks (day/night, sun/moon, windows).</td>
+                        <td>~30 seconds.</td>
+                        <td>
+                            Slight confusion with clickable windows; light change was subtle.
+                        </td>
+                        <td>
+                            Said navigation was easy and liked the day/night animation.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Participant 2 – Shreya</td>
+                        <td>Comfortable with websites; limited animation experience.</td>
+                        <td>Completed tasks with one small hint.</td>
+                        <td>~45 seconds.</td>
+                        <td>
+                            Clicked non-interactive areas before finding main trigger.
+                        </td>
+                        <td>
+                            Described the scene as “cute”. Suggested a hint like “Click to change time of day.”
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Participant 3 – Sarah</td>
+                        <td>Frequent app user; strong visual/UX interest.</td>
+                        <td>Completed all tasks independently.</td>
+                        <td>~25 seconds.</td>
+                        <td>
+                            Short hesitation about interactivity at first.
+                        </td>
+                        <td>
+                            Loved colors and smooth transitions; suggested hover effects on clickable items.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Participant 4 – Dhruv</td>
+                        <td>Intermediate computer user; not familiar with animation demos.</td>
+                        <td>Completed tasks after trial and error.</td>
+                        <td>~50 seconds.</td>
+                        <td>
+                            Had trouble noticing the window light change; subtle feedback.
+                        </td>
+                        <td>
+                            Found project interesting; recommended brighter window light feedback.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Summary of Metrics</h3>
+            <ul>
+                <li><strong>Number of participants:</strong> 4</li>
+                <li><strong>Completion rate:</strong> 100%</li>
+                <li><strong>Error-free rate:</strong> ~75%</li>
+                <li><strong>Average time on task:</strong> ~40 seconds</li>
+                <li><strong>Most common issue:</strong> Discoverability of clickable elements</li>
+            </ul>
+        </section>
+    </div>
+
+
+    </section>
+    </div>
+
+    <div class="page-break">
+        <h2>Proposed Solutions</h2>
+        <section id="solutions">
+
+            <p>
+                Based on the usability findings and the collected data from four participants, the following solutions
+                are
+                recommended to improve the usability and overall user experience of the Day &amp; Night Garden animation
+                project.
+            </p>
+
+            <h3>1. Improve Discoverability of Interactive Elements</h3>
+            <p><strong>Issue:</strong> Users did not immediately recognize which elements were clickable, especially the
+                sky area and the house windows.</p>
+            <p><strong>Proposed Solutions:</strong></p>
+            <ul>
+                <li>Add hover effects (e.g., glow, scale-up, or slight outline) to interactive elements such as the sun,
+                    moon, sky trigger area, and windows.</li>
+                <li>Ensure all clickable elements use <code>cursor: pointer;</code> to indicate interactivity.</li>
+                <li>Add a subtle first-time hint such as: “Click the sky or house to explore animations.”</li>
+            </ul>
+
+            <h3>2. Strengthen Visual Feedback for Window Light Toggle</h3>
+            <p><strong>Issue:</strong> Window lights turning on/off were too subtle and not easily noticed by
+                participants.</p>
+            <p><strong>Proposed Solutions:</strong></p>
+            <ul>
+                <li>Increase brightness and contrast for the “lights on” state.</li>
+                <li>Add a gentle glow animation when the lights toggle to draw attention.</li>
+                <li>Optionally display a temporary label such as “Lights On” or “Lights Off” that fades out after one
+                    second.</li>
+            </ul>
+
+            <h3>3. Provide Clear Context or Description</h3>
+            <p><strong>Issue:</strong> Some users were unsure about the purpose of the project (demo, game, or visual
+                experiment).</p>
+            <p><strong>Proposed Solutions:</strong></p>
+            <ul>
+                <li>Add a small heading under the scene: “Day &amp; Night Garden – Interactive CSS Animation.”</li>
+                <li>Include a short description: “Click around the scene to explore animations and transitions.”</li>
+            </ul>
+
+            <h3>4. Add Light Guidance Without Cluttering the Interface</h3>
+            <p><strong>Issue:</strong> First-time users benefited from slight hints but too much text could clutter the
+                visual design.</p>
+            <p><strong>Proposed Solutions:</strong></p>
+            <ul>
+                <li>Add a short on-screen tooltip that disappears automatically after a few seconds.</li>
+                <li>Hide hints after the first interaction so repeat users experience a clean interface.</li>
+            </ul>
+
+            <h3>5. Support Varied Screen Sizes and Accessibility</h3>
+            <p><strong>Issue:</strong> Current testing was on laptop devices only; smaller screens or reduced contrast
+                might affect usability.</p>
+            <p><strong>Proposed Solutions:</strong></p>
+            <ul>
+                <li>Ensure clickable areas remain large enough on smaller mobile screens.</li>
+                <li>Improve color contrast on interactive elements to support accessibility guidelines.</li>
+                <li>Consider adding alternative text or ARIA labels for key interactive elements.</li>
+            </ul>
+
+            <p>
+                Implementing these solutions will enhance the discoverability of key interactions, improve user
+                feedback,
+                and provide a more intuitive experience for first-time users while keeping the design visually clean and
+                engaging.
+            </p>
+        </section>
+    </div>
+
+
+    </section>
+    </div>
+</body>
+
+</html>
